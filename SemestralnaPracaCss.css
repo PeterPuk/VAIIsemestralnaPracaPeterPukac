@@ -1,0 +1,100 @@
+
+body{
+  background-image: url("pozadie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+}
+
+/*---------------Stylovanie hlavicky --------*/
+
+a{
+  font-size:30px;
+  color:#F3EBFC;;
+  text-decoration: none;
+
+}
+
+a:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+/*---------------Stylovanie hlavicky KONIEC --------*/
+
+
+/*HLAVNY OBSAH*/
+
+.odstavec{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+}
+
+h1{
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 80px;
+  color:#B6AFBD;
+  text-transform: uppercase;
+}
+p{
+
+  color:#F3EBFC;
+}
+
+.centrovanyObrazok{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+
+
+
+/*---------------Stylovanie footeru --------*/
+
+ul{
+  font-size:45px;
+  color:white;
+
+}
+
+
+.zafarbeny{
+  border-top: white solid 3px;
+}
+
+li{
+  font-size:30px;
+  color:#F3EBFC;
+  text-decoration: none;
+
+}
+
+ul{
+  list-style: none;
+}
+
+.float{
+  float:left;
+  margin-right: 25px;
+}
+
+
+h3{
+  font-size: 50px;
+  font-weight: bolder;
+  color:#F3EBFC;
+  margin-left: 20px;
+}
+/*---------------Stylovanie footeru KONIEC --------*/
+
+
+
+
+
+
+
