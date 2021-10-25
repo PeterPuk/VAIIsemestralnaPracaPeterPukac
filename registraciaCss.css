@@ -6,40 +6,99 @@ body{
 }
 /*---------------Stylovanie hlavicky --------*/
 
-a{
+.hlavne{
     font-size:30px;
     color:#F3EBFC;
     text-decoration: none;
 
 }
 
-a:hover{
+.hlavne:hover{
     text-decoration: underline;
-    color: white;
+    color:#F3EBFC;
 }
 
 
 
 /*---------------Stylovanie hlavicky KONIEC --------*/
 
-/*---------------Stylovanie footeru --------*/
-strong{
-    font-size:45px;
+/*---------------Stylovanie prefooteru------*/
+
+
+
+.bielePozadie{
+    background: white;
+    margin-top: 150px;
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
     font-weight: bolder;
+    text-align: center;
+    padding: 15px 15px;
+}
+.logoNike{
+    background-image: url("nikeLogoZmensene.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+
+}
+
+.logoAdidas{
+    background-image: url("adidasLogoZmensene.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+
+}
+
+.logoJordan{
+    background-image: url("jordanLogo.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+
+}
+
+.logoNike{
+    background-image: url("nikeLogoZmensene.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+
+}
+
+.logoVans{
+    background-image: url("vanLogoZmensene.jpg");
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+
+}
+
+
+/*---------------Koniec stylovanie prefooteru------*/
+
+/*---------------Stylovanie footeru --------*/
+
+ul{
+    font-size:45px;
     color:white;
-    display: block;
+
 }
 
 
 .zafarbeny{
-    border-top: white solid 3px;
+    background: white;
+    padding-top: 40px;
 }
 
 li{
     font-size:30px;
-    color:#F3EBFC;
+    color:#3B393D;
     text-decoration: none;
-
 }
 
 ul{
@@ -49,6 +108,26 @@ ul{
 .float{
     float:left;
     margin-right: 25px;
+}
+
+
+
+h3{
+    font-size: 50px;
+    font-weight: bolder;
+    color:#3B393D;
+    margin-left: 20px;
+}
+
+a{
+    font-size:30px;
+    color:#3B393D;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color:#3B393D;
 }
 
 /*---------------Stylovanie footeru KONIEC --------*/
@@ -96,12 +175,6 @@ h1{
     color:#B6AFBD;
 }
 
-h3{
-    font-size: 50px;
-    font-weight: bolder;
-    color:#F3EBFC;
-    margin-left: 20px;
-}
 
 select{
     width: 250px;
