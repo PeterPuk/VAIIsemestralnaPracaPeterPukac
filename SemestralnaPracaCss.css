@@ -4,6 +4,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+
 }
 
 /*---------------Stylovanie hlavicky --------*/
@@ -34,15 +35,21 @@ body{
 
 h1{
   text-align: center;
-  font-size: 60px;
-  margin:  20px 30px;
-  color:#B6AFBD;
+  font-size: 50px;
+  color:white;
   font-style: italic;
-
+  background: black;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin-bottom: 0px;
 }
 p{
-
   color:#F3EBFC;
+}
+
+.odstavecUvod{
+  background: black;
+  border-radius: 7px;
 }
 /* stylovanie caruselu*/
 
@@ -51,9 +58,21 @@ p{
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+  border-radius: 15px;
 }
 
-@media (min-width: 375px) and (max-width: 700px){
+.zrotovany{
+  margin-left: 200px;
+  width: 500px;
+  font-size: 60px ;
+
+}
+
+h5{
+  font-size: 50px;
+}
+
+@media (min-width: 319px) and (max-width: 700px){
   .w-100 {
     width: 100% !important;
     height: 100vh;
@@ -61,6 +80,26 @@ p{
 
   .carousel-item{
     height: 35%;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .w-100 {
+    width: 100% !important;
+    height: 100vh;
+  }
+
+  .carousel-item{
+    height: 35%;
+  }
+
+  h5{
+    font-size: 20px;
+  }
+  .caruselOdstavec{
+    width: 50px;
+
   }
 }
 
@@ -76,6 +115,37 @@ p{
   }
 }
 
+.odsadenyCarusel{
+  margin-bottom: 30px;
+}
+.caruselOdstavec{
+  line-height: 30px;
+  font-size: 25px;
+  font-style: italic;
+}
+
+/*.carousel-caption {
+  top: 0;
+  bottom: auto;
+}*/
+
+.prvyPopisCaruselu{
+  font-size: 50px;
+  top: 0;
+  bottom: auto;
+}
+
+@media (max-width: 768px){
+  h5{
+    font-size: 35px;
+
+  }
+  .caruselOdstavec{
+    font-size: 22px;
+  }
+
+}
+
 @media (min-width: 319px) and (max-width: 700px){
   h1{
     font-size: 25px;
@@ -86,23 +156,8 @@ p{
     height: 35vh;
   }
 
-  .carousel-item{
-    height: 35%;
-  }
-
-}
-.odsadenyCarusel{
-  margin-bottom: 150px;
-}
-.caruselOdstavec{
-  line-height: 30px;
-  font-size: 25px;
-  font-style: italic;
 }
 
-h5{
-  font-size: 50px;
-}
 
 /*Koniec stylovania caruselu*/
 
