@@ -45,7 +45,10 @@ h1{
 }
 p{
   color:#F3EBFC;
+  font-size: 3vw;
 }
+
+
 
 .odstavecUvod{
   background: black;
@@ -68,99 +71,12 @@ p{
 
 }
 
-h5{
-  font-size: 50px;
-}
-
-@media (min-width: 319px) and (max-width: 700px){
-  .w-100 {
-    width: 100% !important;
-    height: 100vh;
-  }
-
-  .carousel-item{
-    height: 35%;
-  }
-
-}
-
-@media (max-width: 767px) {
-  .w-100 {
-    width: 100% !important;
-    height: 100vh;
-  }
-
-  .carousel-item{
-    height: 35%;
-  }
-
-  h5{
-    font-size: 20px;
-  }
-  .caruselOdstavec{
-    width: 50px;
-
-  }
-}
-
-@media (min-width: 701px){
-  .w-100 {
-    width: 100% !important;
-    height: 100vh;
-  }
-
-  .carousel-item{
-    height: 35%;
-
-  }
-}
-
-.odsadenyCarusel{
-  margin-bottom: 30px;
-}
-.caruselOdstavec{
-  line-height: 30px;
-  font-size: 25px;
-  font-style: italic;
-}
-
-/*.carousel-caption {
-  top: 0;
-  bottom: auto;
-}*/
 
 .prvyPopisCaruselu{
   font-size: 50px;
   top: 0;
   bottom: auto;
 }
-
-@media (max-width: 768px){
-  h5{
-    font-size: 35px;
-
-  }
-  .caruselOdstavec{
-    font-size: 22px;
-  }
-
-}
-
-@media (min-width: 319px) and (max-width: 700px){
-  h1{
-    font-size: 25px;
-  }
-
-  .w-100 {
-    width: 100% !important;
-    height: 35vh;
-  }
-
-}
-
-
-/*Koniec stylovania caruselu*/
-
 /*---------------Stylovanie prefooteru------*/
 
 
