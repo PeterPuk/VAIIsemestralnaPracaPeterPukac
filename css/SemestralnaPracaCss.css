@@ -1,0 +1,197 @@
+
+body{
+  background-image: url("../obrazky/pozadie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif;
+
+}
+
+/*---------------Stylovanie hlavicky --------*/
+
+.hlavne{
+  font-size:30px;
+  color:#F3EBFC;
+  text-decoration: none;
+
+}
+
+.hlavne:hover{
+  text-decoration: underline;
+  color:#F3EBFC;
+}
+
+/*---------------Stylovanie hlavicky KONIEC --------*/
+
+
+/*HLAVNY OBSAH*/
+
+.odstavec{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;~
+}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  color:white;
+  font-style: italic;
+  background: black;
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin-bottom: 0px;
+}
+h5{
+  color:#F3EBFC;
+  font-size: 4vw;
+}
+
+
+
+.odstavecUvod{
+  background: black;
+  border-radius: 7px;
+}
+/* stylovanie caruselu*/
+
+.centrovanyObrazok{
+  display: block;
+  border-radius: 15px;
+  width:40%;
+  height: 80%;
+  margin:auto;
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+
+.prvyPopisCaruselu{
+  font-size: 50px;
+  top: 0;
+  bottom: auto;
+}
+/*---------------Stylovanie prefooteru------*/
+
+
+
+.bielePozadie{
+  background: white;
+}
+
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 15px 15px;
+}
+.logoNike{
+  background-image: url("../obrazky/nikeLogoZmensene.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+
+}
+
+.logoAdidas{
+  background-image: url("../obrazky/adidasLogoZmensene.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+
+}
+
+.logoJordan{
+  background-image: url("../obrazky/jordanLogo.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+
+}
+
+.logoNike{
+  background-image: url("../obrazky/nikeLogoZmensene.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+
+}
+
+.logoVans{
+  background-image: url("../obrazky/vanLogoZmensene.jpg");
+  background-size: cover;
+  width: 300px;
+  height: 200px;
+
+}
+
+
+/*---------------Koniec stylovanie prefooteru------*/
+
+
+/*---------------Stylovanie footeru --------*/
+
+ul{
+  font-size:45px;
+  color:white;
+
+}
+
+
+.zafarbeny{
+  background: white;
+  padding-top: 40px;
+}
+
+li{
+  font-size:30px;
+  color:#3B393D;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.float{
+  float:left;
+  margin-right: 25px;
+}
+
+
+
+h3{
+  font-size: 50px;
+  font-weight: bolder;
+  color:#3B393D;
+  margin-left: 20px;
+}
+
+a{
+  font-size:30px;
+  color:#3B393D;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  color:#3B393D;
+}
+/*---------------Stylovanie footeru KONIEC --------*/
+
+
+
+
+
+
+

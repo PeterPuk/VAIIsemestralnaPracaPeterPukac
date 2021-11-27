@@ -2,12 +2,11 @@
 require "PhPtriedy/Aplikacia.php";
 $aplikacia = new Aplikacia();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SneakField/Registracia </title>
+    <title>SneakField/Prihlasenie </title>
 
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,11 +18,10 @@ $aplikacia = new Aplikacia();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/registraciaCss.css">
+    <link rel="stylesheet" href="css/prihlasenieCss.css">
 </head>
 
 <body>
-
 <div class="top-bar nav-down">
     <div class="container-fluid">
         <div class="row">
@@ -45,7 +43,7 @@ $aplikacia = new Aplikacia();
                     </svg>
                     Prihásenie</a>
             </div>
-            <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2">
+            <div class="col-2 col-sm-12 col-md-3 col-lg-2 col-xl-2">
                 <a href="Registracia.php" class="hlavne">
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-rolodex" viewBox="-14 -5 30 30">
                         <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
@@ -57,7 +55,6 @@ $aplikacia = new Aplikacia();
         </div>
     </div>
 </div>
-
 
 <div class="container-fluid">
     <div class="row">
@@ -93,76 +90,43 @@ $aplikacia = new Aplikacia();
                     </div>
                 </div>
             </nav>
+
         </div>
     </div>
 
     <!--koniec hlavicky-->
 
+
     <!--Hlavny obsah-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1>
-                    Registrácia
-                </h1>
-            </div>
-        </div>
-    </div>
 
-    <form method="post">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-lg-1 col-xl-1">
+    <h1>
+        Prihlásenie
+    </h1>
+    <form method="get">
+        <div class="obalovac">
+            <input type="email" name="mail" placeholder="e-mail @">
 
-                </div>
+            <input type="password" placeholder="Heslo" name="heslo">
 
-                <div class=" col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="text" name="meno" placeholder="meno" required>
-                </div>
+            <?php
+            if (isset($_GET['potvrditPrihlasenie'])) {
+                $pom = $aplikacia->spracujFormular();
+                if ($pom == 1) {
+                    echo "<script> location.href='PrihlasenyAdmin.php'; </script>";
+                } elseif($pom == 2) {
+                    echo "<script> location.href='PrihlasenyZakaznik.html'; </script>";
+                }elseif ($pom == 3){
+                    echo "<p>Zadali ste zlé prihlasovacie údaje</p>";
+                }
+            }
+            ?>
 
-                <div class="col-12 col-sm-12 col-lg-1 col-xl-1"></div>
-
-                <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="text" name="priezvisko" placeholder="priezvisko" required>
-                </div>
-
-                <div class="col-12 col-sm-12 col-lg-1 col-xl-1"></div>
-
-                <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="email" name="mail" placeholder="email @">
-                </div>
-
-                <div class="col-12 col-sm-12 col-lg-1 col-xl-1">
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 col-sm-12 col-lg-1 col-xl-1"></div>
-
-                <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="tel" name="tel_cislo" placeholder="telefónne číslo... ">
-                </div>
-
-                <div class=" col-12 col-sm-12 col-lg-1 col-xl-1"></div>
-
-                <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="password" placeholder="Heslo" name="heslo">
-                </div>
-
-                <div class=" col-12 col-sm-12 col-lg-1 col-xl-1"></div>
-
-                <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="submit" name="potvrditRegistraciu" value="Registrovať">
-
-                </div>
-            </div>
+            <input type="submit" name="potvrditPrihlasenie" value="Prihlásiť">
         </div>
     </form>
 
 
     <!--Hlavny obsah koniec-->
-
     <div class="row bielePozadie">
 
         <div class="col-12 col-md-6 col-lg-3">
@@ -213,7 +177,7 @@ $aplikacia = new Aplikacia();
             <div class="col-12 col-sm-12 col-md-6 col-lg-5">
                 <h3>Nájdete nás</h3>
                 <ul>
-                    <li class="float ">
+                    <li class="float">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                              class="bi bi-facebook" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -249,29 +213,9 @@ $aplikacia = new Aplikacia();
         </div>
 
     </div>
+
+
 </div>
-
-
-<?php
-/**@var Zakaznik $zakaznik */
-
-$aplikacia->spracujFormular();
-
-echo "<p>Toto je databaza zakaznikov </p>";
-echo "<p>----------------------------------</p>";
-$pom = 0;
-foreach ($aplikacia->nacitajData() as $zakaznik) {
-    echo "<p>" . $pom . " " . $zakaznik->getMeno() . " </p>";
-    echo "<p>" . $zakaznik->getPriezvisko() . "</p>";
-    echo "<p>" . $zakaznik->getMail() . "</p>";
-    echo "<p>" . $zakaznik->getTelCislo() . "</p>";
-    echo "<p>" . $zakaznik->getHeslo() . "</p>";
-    echo "<p>----------------------------------</p>";
-    $pom++;
-}
-
-
-?>
 
 </body>
 </html>
