@@ -3,6 +3,7 @@
 class DBUlozisko
 {
     private $databaza;
+    private $posledneVlozeneID;
 
     public function __construct()
     {
@@ -17,7 +18,7 @@ class DBUlozisko
         $dbResult = $this->databaza->query($sql);
         if($dbResult->num_rows > 0){
             while ($record = $dbResult->fetch_assoc()){;
-                $result[] = new Zakaznik($record['meno'], $record['priezvisko'],$record['mail'], $record['tel_cislo'],
+                $result[] = new Zakaznik($record['id_zakaznik'],$record['meno'], $record['priezvisko'],$record['mail'], $record['tel_cislo'],
                 $record['heslo']);
             }
         }
@@ -26,20 +27,25 @@ class DBUlozisko
 
     public function vlozZaznamDoDB(Zakaznik $zakaznik)
     {
-        $stmt = $this->databaza->prepare("INSERT INTO zakaznik(meno, priezvisko, mail, tel_cislo, heslo) VALUES (?,?,?,?,?)");
         $meno = $zakaznik->getMeno();
         $priezvisko = $zakaznik->getPriezvisko();
         $mail = $zakaznik->getMail();
         $tel_cislo = $zakaznik->getTelCislo();
         $heslo = $zakaznik->getHeslo();
-        $stmt->bind_param('sssss',$meno, $priezvisko, $mail, $tel_cislo, $heslo);
-        $stmt->execute();
-        $this->zachytChybuDB();
+
+        $sql = "INSERT INTO zakaznik (meno,priezvisko,mail,tel_cislo,heslo)
+            VALUES ('$meno','$priezvisko','$mail','$tel_cislo','$heslo')";
+        $dbResult = $this->databaza->query($sql);
+
+        if($this->zachytChybuDB() == false){
+            $id = $this->databaza->insert_id;
+            $zakaznik->setId($id);
+        }
     }
 
-    public function vymazZaznamZDB(string $meno)
+    public function vymazZaznamZDB(int $id)
     {
-        $sql = "DELETE FROM  zakaznik WHERE meno = '$meno'";
+        $sql = "DELETE FROM  zakaznik WHERE id_zakaznik = '$id'";
         $dbResult = $this->databaza->query($sql);
         $this->zachytChybuDB();
     }
@@ -68,6 +74,9 @@ class DBUlozisko
     private function zachytChybuDB(){
             if($this->databaza->error){
                 die('DB chyba: ' . $this->databaza->error);
+
+            }else{
+                return false; /*vracia ze nezachytil chybu*/
             }
     }
 

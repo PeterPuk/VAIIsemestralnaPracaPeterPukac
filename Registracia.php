@@ -253,23 +253,7 @@ $aplikacia = new Aplikacia();
 
 
 <?php
-/**@var Zakaznik $zakaznik */
-
 $aplikacia->spracujFormular();
-
-echo "<p>Toto je databaza zakaznikov </p>";
-echo "<p>----------------------------------</p>";
-$pom = 0;
-foreach ($aplikacia->nacitajData() as $zakaznik) {
-    echo "<p>" . $pom . " " . $zakaznik->getMeno() . " </p>";
-    echo "<p>" . $zakaznik->getPriezvisko() . "</p>";
-    echo "<p>" . $zakaznik->getMail() . "</p>";
-    echo "<p>" . $zakaznik->getTelCislo() . "</p>";
-    echo "<p>" . $zakaznik->getHeslo() . "</p>";
-    echo "<p>----------------------------------</p>";
-    $pom++;
-}
-
 
 ?>
 

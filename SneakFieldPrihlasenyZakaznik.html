@@ -1,15 +1,8 @@
-<?php
-require "PhPtriedy/Aplikacia.php";
-$aplikacia = new Aplikacia();
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SneakField </title>
-
+    <title>SNEAKFIELD</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -20,48 +13,54 @@ $aplikacia = new Aplikacia();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="css/prihlasenyAdmin.css">
-</head>
 
+    <link rel="stylesheet" href="css/SemestralnaPracaCss.css" type="text/css">
+
+
+</head>
 <body>
 
+<!-- Hlavicka -->
 <div class="top-bar nav-down">
     <div class="container-fluid">
         <div class="row">
-
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-8"><!-- Zaciatok -->
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"><!-- Zaciatok -->
                 <a href="tel:0907071723" class="hlavne">
-                    <!--<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-telephone" viewBox="-13 -4 30 30">
-                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                    </svg>-->
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
-                         class="bi bi-phone" viewBox="-14 -4 30 30">
+                         class="bi bi-phone" viewBox="-17 -4 30 30">
                         <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
                         <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                     </svg>
                     tel: 0907 071 723</a>
             </div>
 
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
-                <a href="Prihlasenie.php" class="hlavne">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                <a href="#" class="hlavne">
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
-                         class="bi bi-person" viewBox="-14 -4 30 30">
+                         class="bi bi-person" viewBox="-16 -4 30 30">
                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
                     </svg>
-                    Admin</a>
+                    Profil</a>
             </div>
-
-            <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
                 <a href="Prihlasenie.php" class="hlavne">
                     <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
-                         class="bi bi-person-x" viewBox="-14 -4 30 30">
-                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                         class="bi bi-bag-check" viewBox="-15.15 -4 30 30">
                         <path fill-rule="evenodd"
-                              d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
+                              d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    </svg>
+                    Košík</a>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-2">
+                <a href="Prihlasenie.php" class="hlavne">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70"fill="currentColor" class="bi bi-person-x" viewBox="-14 -4 30 30">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
                     </svg>
                     Odhlásiť</a>
             </div>
-
 
             <!-- Koniec -->
         </div>
@@ -73,7 +72,7 @@ $aplikacia = new Aplikacia();
         <div class="col-12">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="SneakField.html">
+                    <a class="navbar-brand" href="#">
                         <img src="obrazky/logoZmensene.jpg" alt="" width="80" height="72">
 
                     </a>
@@ -84,7 +83,7 @@ $aplikacia = new Aplikacia();
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="SneakField.html">Domov</a>
+                                <a class="nav-link" aria-current="page" href="#">Domov</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Dámske</a>
@@ -102,78 +101,121 @@ $aplikacia = new Aplikacia();
                     </div>
                 </div>
             </nav>
+
         </div>
     </div>
 
-    <!--koniec hlavicky-->
+    <!--Koniec hlavicky-->
+
 
     <!--Hlavny obsah-->
-
     <h1>
-        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentcolor"
-             class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-        </svg>
-        Ste prihlásený ako administrátor.
+        Obchod, kde sa sny o teniskách stávajú realitou.
     </h1>
+    <div class="row">
 
-    <table class="table table-striped table-dark  table-hover overflow-x:auto">
-        <thead>
-        <tr>
-            <th>Poradie</th>
-            <th>id_zakaznik</th>
-            <th>meno</th>
-            <th>priezvisko</th>
-            <th>mail</th>
-            <th>tel_cislo</th>
-            <th>heslo</th>
-            <th colspan="1">Operácia</th>
-        </tr>
-        </thead>
-        <tbody>
+        <div class="col-12 col-lg-1">
+
+        </div>
+        <div class="col-12 col-lg-12 ">
+            <div id="carouselExampleCaptions" class="carousel slide odsadenyCarusel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="obrazky/obrazokDoCaruselu1.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption ">
+                            <h5>Jedny z najikonickejších tenisiek všetkých čias, Air Jordan 1 mid v širokom spektre.
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="obrazky/druhyObrazokDoCaruselu.jpg" class="d-block w-100 h-300" alt="...">
+                        <div class="carousel-caption">
+                            <h5>Na prvom mieste ste pre nás Vy, zákaznícka linka 24/7!</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="obrazky/obrazokdoCaruseluPosledny.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption">
+                            <h5>Pridajte sa aj vy do viac ako tisícčlennej komunity! </h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-1">
+
+        </div>
+
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 odstavec">
+                <p class="odstavecUvod">
+                    Náša firma je plná mladých, kreatívnych a pracovitých ľudí. Každý z nich sa vie vcítiť do potrieb
+                    zákazníkov
+                    akéhokoľvek veku. Obuv, ktorú určite ocení aj ten najnáročnejčí človek na svete. Líšime sa od
+                    druhých
+                    hlavne výnimočnými modelmi športovej a vychádzkovej obuvy. Veľa z nich nie je možné len tak kúpiť a
+                    je
+                    potrebné si ju vyhľadať, čo trvá čas. A preto sme tu my ktorí to urobia za Vás.
+
+                </p>
+
+                <div class="col-10">
+
+                </div>
+            </div>
+        </div>
 
 
-        <?php
-        $aplikacia->spracujFormular();
-        /**@var Zakaznik $zakaznik */
-        $pom = 1;
-        foreach ($aplikacia->nacitajData() as $zakaznik) { ?>
-        <tr class="w-auto">
-            <td><?php echo $pom ?> </td>
-            <td><?php echo $zakaznik->getId() ?></td>
-            <td><?php echo $zakaznik->getMeno() ?></td>
-            <td><?php echo $zakaznik->getPriezvisko() ?></td>
-            <td><?php echo $zakaznik->getMail() ?></td>
-            <td><?php echo $zakaznik->getTelCislo() ?></td>
-            <td><?php echo $zakaznik->getHeslo() ?></td>
-            <td>
-                <a href="PrihlasenyAdmin.php?delete=<?php echo $zakaznik->getId(); ?>"
-                   class="btn btn-danger">Vymazať
-                </a>
-            </td>
-            <?php $pom++;
-            } ?>
-        </tbody>
-    </table>
+    </div>
+</div>
 
-    <!--Hlavny obsah koniec-->
+<img src="obrazky/logoZmensene2.jpg" alt="" class="centrovanyObrazok">
 
+<!--Hlavny obsah KONIEC-->
+
+
+<!--PreFooter-->
+<div class="container-fluid">
     <div class="row bielePozadie">
 
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-md-6 col-lg-3">
             <a href="#">
                 <div class="logoNike">
                 </div>
             </a>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-md-6 col-lg-3">
             <a href="#">
                 <div class="logoAdidas">
 
                 </div>
             </a>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-md-6 col-lg-3">
             <a href="#">
                 <div class="logoJordan">
 
@@ -181,7 +223,7 @@ $aplikacia = new Aplikacia();
             </a>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-6 col-md-6 col-lg-3">
             <a href="#">
                 <div class="logoVans">
                 </div>
@@ -190,12 +232,11 @@ $aplikacia = new Aplikacia();
         </div>
     </div>
 
-    <!--Footer zaciatok-->
-
+    <!--Footer-->
     <div class="col-12">
         <div class="row zafarbeny">
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+            <div class="col-6 col-sm-12 col-md-6 col-lg-5">
                 <h3>K nákupu</h3>
                 <ul>
                     <li><a href="#!">Formuláre</a></li>
@@ -205,10 +246,10 @@ $aplikacia = new Aplikacia();
                 </ul>
             </div>
 
-            <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+            <div class="col-6 col-sm-12 col-md-6 col-lg-5">
                 <h3>Nájdete nás</h3>
                 <ul>
-                    <li class="float ">
+                    <li class="float">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
                              class="bi bi-facebook" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
@@ -244,7 +285,10 @@ $aplikacia = new Aplikacia();
         </div>
 
     </div>
+    <!--Footer koniec -->
+
 </div>
+
 
 </body>
 </html>

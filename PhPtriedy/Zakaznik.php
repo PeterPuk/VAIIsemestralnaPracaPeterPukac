@@ -2,20 +2,31 @@
 
 class Zakaznik
 {
-
     private $meno;
     private $priezvisko;
     private $mail;
     private $tel_cislo;
     private $heslo;
+    private $Id;
 
-    public function __construct($meno, $priezvisko, $mail, $tel_cislo, $heslo)
+    public function __construct($Id,$meno, $priezvisko, $mail, $tel_cislo, $heslo)
     {
+        $this->Id = $Id;
         $this->meno = $meno;
         $this->priezvisko = $priezvisko;
         $this->mail = $mail;
         $this->tel_cislo = $tel_cislo;
         $this->heslo = $heslo;
+    }
+
+    public function setId($pId)
+    {
+        $this->Id = $pId;
+    }
+
+    public function getId()
+    {
+        return $this->Id;
     }
 
     /**

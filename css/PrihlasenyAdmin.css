@@ -137,8 +137,8 @@ a:hover{
 /*---------------HLAVNY OBSAH------------*/
 h1{
     font-size: 50px;
-    color:#B6AFBD;
-    margin-top: 200px;
+    color:white;
+    margin-top: 30px;
 }
 
 p{
@@ -146,9 +146,11 @@ p{
     color: white;
 }
 
+
+
 @media (max-width: 768px){
     h1{
-        font-size: 33px;
+        font-size: 25px;
         margin-top: 100px;
     }
 
