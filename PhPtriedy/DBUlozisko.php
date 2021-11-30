@@ -43,6 +43,60 @@ class DBUlozisko
         }
     }
 
+    public function upravMeno(int $idPrihlaseneho, string $hodnota)
+    {
+        $sql = "UPDATE zakaznik SET meno = '$hodnota' WHERE id_zakaznik = '$idPrihlaseneho'";
+        $dbResult = $this->databaza->query($sql);
+        $this->zachytChybuDB();
+        if($this->zachytChybuDB() == false){
+            echo "<script> location.href='PrihlasenyZakaznikProfil.php' </script>";
+        }
+    }
+
+    public function upravPriezvisko(int $idPrihlaseneho, string $hodnota)
+    {
+        $sql = "UPDATE zakaznik SET priezvisko = '$hodnota' WHERE id_zakaznik = '$idPrihlaseneho'";
+        $dbResult = $this->databaza->query($sql);
+        $this->zachytChybuDB();
+        if($this->zachytChybuDB() == false){
+            echo "<script> location.href='PrihlasenyZakaznikProfil.php' </script>";
+        }
+    }
+    public function upravMail (int $idPrihlaseneho, string $hodnota)
+    {
+        $sql = "UPDATE zakaznik SET mail = '$hodnota' WHERE id_zakaznik = '$idPrihlaseneho'";
+        $dbResult = $this->databaza->query($sql);
+        $this->zachytChybuDB();
+        if($this->zachytChybuDB() == false){
+            echo "<script> location.href='PrihlasenyZakaznikProfil.php' </script>";
+        }
+    }
+    public function upravTelCislo(int $idPrihlaseneho, string $hodnota)
+    {
+        $sql = "UPDATE zakaznik SET tel_cislo = '$hodnota' WHERE id_zakaznik = '$idPrihlaseneho'";
+        $dbResult = $this->databaza->query($sql);
+        $this->zachytChybuDB();
+        if($this->zachytChybuDB() == false){
+            echo "<script> location.href='PrihlasenyZakaznikProfil.php' </script>";
+        }
+    }
+    public function upravHeslo(int $idPrihlaseneho, string $hodnota)
+    {
+        $sql = "UPDATE zakaznik SET heslo = '$hodnota' WHERE id_zakaznik = '$idPrihlaseneho'";
+        $dbResult = $this->databaza->query($sql);
+        $this->zachytChybuDB();
+        if($this->zachytChybuDB() == false){
+            echo "<script> location.href='PrihlasenyZakaznikProfil.php' </script>";
+        }
+    }
+
+
+    public function zvolStlpecNaUpravenie(string $stlpec)
+    {
+
+
+    }
+
     public function vymazZaznamZDB(int $id)
     {
         $sql = "DELETE FROM  zakaznik WHERE id_zakaznik = '$id'";
@@ -55,9 +109,11 @@ class DBUlozisko
         $sql = "SELECT * FROM zakaznik WHERE mail = '$mail' AND heslo = '$heslo'";
         $dbResult = $this->databaza->query($sql);
         if($dbResult->num_rows == 1){
-            return true;
+            $record = $dbResult->fetch_assoc();
+                $id = $record['id_zakaznik'];
+                return $id;
         }else{
-            return false;
+            return null;
         }
 
     }

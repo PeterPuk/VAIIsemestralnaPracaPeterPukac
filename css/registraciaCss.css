@@ -18,6 +18,12 @@ body{
     color:#F3EBFC;
 }
 
+.obrazokProfil{
+    border-radius: 60%;
+    position: relative;
+    margin-left: 40%;
+}
+
 
 
 /*---------------Stylovanie hlavicky KONIEC --------*/

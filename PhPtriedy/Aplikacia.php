@@ -1,8 +1,7 @@
 <?php
-
 require 'PhPtriedy/DBUlozisko.php';
 require 'PhPtriedy/Zakaznik.php';
-
+session_start();
 class Aplikacia
 {
     private $ulozisko;
@@ -22,7 +21,8 @@ class Aplikacia
         } elseif (isset($_GET['potvrditPrihlasenie'])) {
             $zadanyMail = $_GET['mail'];
             $zadaneHeslo = $_GET['heslo'];
-            if ($this->ulozisko->nasielSaZakaznik($zadanyMail, $zadaneHeslo) == true) {
+            if ($this->ulozisko->nasielSaZakaznik($zadanyMail, $zadaneHeslo) != null) {
+                $_SESSION['idPrihlaseneho'] = $this->ulozisko->nasielSaZakaznik($zadanyMail, $zadaneHeslo);
                 if ($this->ulozisko->jeToAdmin($zadanyMail, $zadaneHeslo) == true) {
                     return 1;
                 }
@@ -31,9 +31,28 @@ class Aplikacia
                 return 3;
             }
         } elseif (isset($_GET['delete'])){
-        $id_zakaznik = ($_GET['delete']);
-        $this->ulozisko->vymazZaznamZDB($id_zakaznik);
-    }
+            $id_zakaznik = ($_GET['delete']);
+            $this->ulozisko->vymazZaznamZDB($id_zakaznik);
+
+        }elseif (isset($_GET['upravit'])) {
+            $idPrihlaseneho = ($_GET['id']);
+            if(isset($_GET['meno'])) {
+                $hodnota = ($_GET['meno']);
+                $this->ulozisko->upravMeno($idPrihlaseneho, $hodnota);
+            }elseif (isset($_GET['priezvisko'])){
+                $hodnota = ($_GET['priezvisko']);
+                $this->ulozisko->upravPriezvisko($idPrihlaseneho, $hodnota);
+            }elseif (isset($_GET['mail'])){
+                $hodnota = ($_GET['mail']);
+                $this->ulozisko->upravMail($idPrihlaseneho, $hodnota);
+            }elseif (isset($_GET['tel_cislo'])){
+                $hodnota = ($_GET['tel_cislo']);
+                $this->ulozisko->upravTelCislo($idPrihlaseneho, $hodnota);
+            }elseif (isset($_GET['heslo'])){
+                $hodnota = ($_GET['heslo']);
+                $this->ulozisko->upravHeslo($idPrihlaseneho, $hodnota);
+            }
+        }
     }
 
     public function nacitajData()
@@ -46,14 +65,5 @@ class Aplikacia
         return $this->ulozisko->vymazZaznamZDB($meno);
     }
 
-    public function vymazSetko()
-    {
-        return $this->ulozisko->vymazVsetkyData();
-    }
-
-    public function prihlasZakaznika()
-    {
-
-    }
 
 }

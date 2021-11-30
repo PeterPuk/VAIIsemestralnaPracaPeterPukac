@@ -114,7 +114,7 @@ $aplikacia = new Aplikacia();
                 if ($pom == 1) {
                     echo "<script> location.href='PrihlasenyAdmin.php'; </script>";
                 } elseif($pom == 2) {
-                    echo "<script> location.href='PrihlasenyZakaznikUvod.html'; </script>";
+                    echo "<script> location.href='PrihlasenyZakaznikProfil.php' </script>";
                 }elseif ($pom == 3){
                     echo "<p>Zadali ste zlé prihlasovacie údaje</p>";
                 }
