@@ -97,7 +97,7 @@ $aplikacia = new Aplikacia();
             </nav>
         </div>
     </div>
-
+</div>
     <!--koniec hlavicky-->
 
     <!--Hlavny obsah-->
@@ -263,6 +263,7 @@ $aplikacia = new Aplikacia();
             </div>
 
         </div>
+    </div>
 
 </body>
 </html>
