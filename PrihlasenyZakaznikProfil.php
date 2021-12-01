@@ -121,8 +121,7 @@ $aplikacia = new Aplikacia();
 <img src="obrazky/profil.png" alt="" class="obrazokProfil">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-1"> </div>
-        <div class="col-6">
+        <div class="col-12 col-sm-12 col-md-5 col-lg-6">
             <?php
             $aplikacia->spracujFormular();
             $idPrihlaseneho = $_SESSION['idPrihlaseneho'];
@@ -134,15 +133,15 @@ $aplikacia = new Aplikacia();
                     $mail = $zakaznik->getMail();
                     $cislo = $zakaznik->getTelCislo();
                     $heslo = $zakaznik->getHeslo();
-                    echo "<p>" . "Meno:  " .   $zakaznik->getMeno() . "</p>";
-                    echo "<p>" . "Priezvisko:  " .   $zakaznik->getPriezvisko() . "</p>";
-                    echo "<p>" . "E-mailová adresa:  " .   $zakaznik->getMail() . "</p>";
-                    echo "<p>" . "Telefónne číslo:    " .   $zakaznik->getTelCislo() . "</p>";
+                    echo "<p>" . "Meno:  ".$zakaznik->getMeno() . "</p>";
+                    echo "<p>" . "Priezvisko:  ".$zakaznik->getPriezvisko() . "</p>";
+                    echo "<p>" . "E-mailová adresa:  ".$zakaznik->getMail() . "</p>";
+                    echo "<p>" . "Telefónne číslo: " .$zakaznik->getTelCislo() . "</p>";
                     echo "<p>" . "Vaše heslo:    " .   $zakaznik->getHeslo() . "</p>";
                 }
             } ?>
         </div>
-        <div class="col-5">
+        <div class=" col-12 col-md-7 col-lg-5">
             <div class="obalovac">
                 <form method="get">
                     <input class="skryty" type="text" name="id" value="<?php echo $idPrihlaseneho ?>">

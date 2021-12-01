@@ -187,16 +187,17 @@ p{
 }
 
 
-select{
-    width: 250px;
-    height:80px;
+.zleCislo{
     font-size: 30px;
-    padding: 15px 20px;
-    border-radius: 15px;
-    background: #E4DDED;
-    margin: 20px;
+    color: red;
+
 }
 
+.dobreCislo{
+    font-size: 30px;
+    color: #E4DDED;;
+
+}
 @media (min-width: 425px) and (max-width: 768px){
     h1{
         margin-left: 29px;
@@ -206,12 +207,6 @@ select{
 
     input:not([type="checkbox"]){
         width: 400px;
-    }
-}
-
-@media (min-width: 375px) and (max-width: 425px){
-    h1{
-        margin-right: 46px;
     }
 }
 
@@ -262,3 +257,4 @@ select{
         border-radius: 15px;
     }
 }
+

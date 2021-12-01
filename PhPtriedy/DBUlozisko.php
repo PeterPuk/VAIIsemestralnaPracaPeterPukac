@@ -90,13 +90,6 @@ class DBUlozisko
         }
     }
 
-
-    public function zvolStlpecNaUpravenie(string $stlpec)
-    {
-
-
-    }
-
     public function vymazZaznamZDB(int $id)
     {
         $sql = "DELETE FROM  zakaznik WHERE id_zakaznik = '$id'";

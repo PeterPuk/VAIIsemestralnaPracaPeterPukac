@@ -16,6 +16,7 @@ $aplikacia = new Aplikacia();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <script src="Javascript/kontrolaCisla.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -47,7 +48,8 @@ $aplikacia = new Aplikacia();
             </div>
             <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2">
                 <a href="Registracia.php" class="hlavne">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor" class="bi bi-person-rolodex" viewBox="-14 -5 30 30">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+                         class="bi bi-person-rolodex" viewBox="-14 -5 30 30">
                         <path d="M8 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
                         <path d="M1 1a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h.5a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5.5.5 0 0 1 1 0 .5.5 0 0 0 .5.5h.5a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H6.707L6 1.293A1 1 0 0 0 5.293 1H1Zm0 1h4.293L6 2.707A1 1 0 0 0 6.707 3H15v10h-.085a1.5 1.5 0 0 0-2.4-.63C11.885 11.223 10.554 10 8 10c-2.555 0-3.886 1.224-4.514 2.37a1.5 1.5 0 0 0-2.4.63H1V2Z"/>
                     </svg>
@@ -109,8 +111,8 @@ $aplikacia = new Aplikacia();
         </div>
     </div>
 
-    <form method="post">
-        <div class="container-fluid">
+    <div class="container-fluid">
+        <form method="post">
             <div class="row">
                 <div class="col-12 col-sm-12 col-lg-1 col-xl-1">
 
@@ -141,13 +143,16 @@ $aplikacia = new Aplikacia();
                 <div class="col-12 col-sm-12 col-lg-1 col-xl-1"></div>
 
                 <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="tel" name="tel_cislo" placeholder="telefónne číslo... "required>
+                    <input type="number" name="tel_cislo" placeholder="tel v tvare 09... "
+                           onkeyup="zistiPocetCisel(this)" onfocusout=""
+                           required> <br>
+                    <span id="tel_cislo"></span>
                 </div>
 
                 <div class=" col-12 col-sm-12 col-lg-1 col-xl-1"></div>
 
                 <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
-                    <input type="password" placeholder="Heslo" name="heslo"required>
+                    <input type="password" placeholder="Heslo" name="heslo" required>
                 </div>
 
                 <div class=" col-12 col-sm-12 col-lg-1 col-xl-1"></div>
@@ -155,49 +160,60 @@ $aplikacia = new Aplikacia();
                 <div class="col-12 col-sm-12 col-lg-3 col-xl-3">
                     <input type="submit" name="potvrditRegistraciu" value="Registrovať">
 
+                    <?php
+                    if (isset($_POST['potvrditRegistraciu'])) {
+                    $pom = $aplikacia->spracujFormular(); ?>
                 </div>
             </div>
-        </div>
-    </form>
-
-
+        </form>
+    </div>
+    <div class="container-fluid">
+    <?php
+    if ($pom == 0) {
+        echo "<p class='zleCislo'>Zadali ste zlé telefónne číslo!</p>";
+    } else if ($pom == -1) {
+        echo "<p class='dobreCislo'>Vaša registrácia prebehla úspešne.</p>";
+    }
+    }
+    ?>
+    </div>
     <!--Hlavny obsah koniec-->
 
-    <div class="row bielePozadie">
+    <div class="container-fluid">
+        <div class="row bielePozadie">
 
-        <div class="col-12 col-md-6 col-lg-3">
-            <a href="#">
-                <div class="logoNike">
-                </div>
-            </a>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="logoNike">
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="logoAdidas">
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="logoJordan">
+
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="#">
+                    <div class="logoVans">
+                    </div>
+                </a>
+
+            </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <a href="#">
-                <div class="logoAdidas">
 
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3">
-            <a href="#">
-                <div class="logoJordan">
+        <!--Footer zaciatok-->
 
-                </div>
-            </a>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-            <a href="#">
-                <div class="logoVans">
-                </div>
-            </a>
-
-        </div>
-    </div>
-
-    <!--Footer zaciatok-->
-
-    <div class="col-12">
         <div class="row zafarbeny">
 
             <div class="col-12 col-sm-12 col-md-6 col-lg-5">
@@ -247,15 +263,6 @@ $aplikacia = new Aplikacia();
             </div>
 
         </div>
-
-    </div>
-</div>
-
-
-<?php
-$aplikacia->spracujFormular();
-
-?>
 
 </body>
 </html>
