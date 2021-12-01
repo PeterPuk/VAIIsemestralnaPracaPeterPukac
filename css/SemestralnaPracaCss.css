@@ -65,8 +65,16 @@ h5{
 
 }
 
-.row {
-  display: flex;
+.rowSpecial {
+  opacity: 0;
+  transform: scale(0.1) ;
+  transition: all 1s ease-in-out;
+
+}
+
+.active{
+  opacity: 1;
+  transform: scale(1);
 }
 
 .column {
