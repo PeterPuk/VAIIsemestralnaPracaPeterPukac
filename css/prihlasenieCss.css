@@ -173,13 +173,21 @@ input[type="submit"]{
 
 }
 
-
+.prihlasenie{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 81px;
+    color:#B6AFBD;
+    background: none;
+}
 
 h1{
     text-align: center;
-    text-transform: uppercase;
-    font-size: 81px;
-    color:#B6AFBD;
+    font-size: 50px;
+    color:white;
+    background: black;
+    padding: 15px 25px;
+    margin-bottom: 0px;
 }
 
 p{

@@ -34,7 +34,6 @@ body{
 
 .bielePozadie{
     background: white;
-    margin-top: 150px;
 }
 
 h2{
@@ -156,16 +155,6 @@ input:focus{
     outline: black 8px solid;
 }
 
-label{
-    cursor: pointer;
-    display: block;
-    text-align: left;
-    padding-left: 0;
-    color:#B6AFBD;
-    font-size: 30px;
-}
-
-
 input[type="submit"]{
     cursor: pointer;
     background: #78747D;
@@ -173,14 +162,22 @@ input[type="submit"]{
     font-size: 30px;
 }
 
-
 h1{
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    background: black;
+    padding: 15px 25px;
+    margin-bottom: 0px;
+}
+
+.registracia{
     text-transform: uppercase;
     text-align: center;
     font-size: 81px;
     color:#B6AFBD;
+    background: none;
 }
-
 p{
     font-size: 30px;
     color: white;

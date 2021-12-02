@@ -162,11 +162,20 @@ input[type="submit"]{
 }
 
 
-h1{
+.hlavnyNadpis{
     text-transform: uppercase;
     text-align: center;
     font-size: 81px;
     color:#B6AFBD;
+    background: none;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    background: black;
+    padding: 15px 25px;
+    margin-bottom: 0px;
 }
 
 p{
@@ -176,6 +185,12 @@ p{
 
 .skryty{
     visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .skryty{
+        display: block;
+    }
 }
 
 

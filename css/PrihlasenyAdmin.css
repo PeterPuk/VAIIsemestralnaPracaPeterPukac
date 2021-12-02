@@ -135,11 +135,23 @@ a:hover{
 
 /*---------------Stylovanie footeru KONIEC --------*/
 /*---------------HLAVNY OBSAH------------*/
-h1{
+.hlavnyNadpis{
     font-size: 50px;
     color:white;
     margin-top: 30px;
+    background: none;
+    margin-left: 0;
 }
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    background: black;
+    padding: 15px 25px;
+    margin-bottom: 0px;
+}
+
 
 p{
     font-size: 30px;
