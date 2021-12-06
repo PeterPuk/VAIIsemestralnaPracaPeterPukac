@@ -49,20 +49,20 @@ require 'PatyAHlavicky/HlavickaPrihlasenyAdmin.php';
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="obrazky/obrazokDoCaruselu1.jpg" class="d-block w-100 " alt="...">
+                    <img src="../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/obrazokDoCaruselu1.jpg" class="d-block w-100 " alt="...">
                     <div class="carousel-caption ">
                         <h5>Jedny z najikonickejších tenisiek všetkých čias, Air Jordan 1 mid v širokom spektre.
                         </h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="obrazky/druhyObrazokDoCaruselu.jpg" class="d-block w-100 h-300" alt="...">
+                    <img src="../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/druhyObrazokDoCaruselu.jpg" class="d-block w-100 h-300" alt="...">
                     <div class="carousel-caption">
                         <h5>Na prvom mieste ste pre nás Vy, zákaznícka linka 24/7!</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="obrazky/obrazokdoCaruseluPosledny.jpg" class="d-block w-100" alt="...">
+                    <img src="../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/obrazokdoCaruseluPosledny.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
                         <h5>Pridajte sa aj vy do viac ako tisícčlennej komunity! </h5>
                     </div>
@@ -108,7 +108,7 @@ require 'PatyAHlavicky/HlavickaPrihlasenyAdmin.php';
             </div>
         </div>
     </div>
-    <img src="obrazky/logoZmensene2.jpg" alt="" class="centrovanyObrazok">
+    <img src="../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/logoZmensene2.jpg" alt="" class="centrovanyObrazok">
     <!--Hlavny obsah KONIEC-->
 
 

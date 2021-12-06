@@ -44,7 +44,7 @@ h2{
     padding: 15px 15px;
 }
 .logoNike{
-    background-image: url("../obrazky/nikeLogoZmensene.jpg");
+    background-image: url("../../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/nikeLogoZmensene.jpg");
     background-size: cover;
     width: 300px;
     height: 200px;
@@ -52,7 +52,7 @@ h2{
 }
 
 .logoAdidas{
-    background-image: url("../obrazky/adidasLogoZmensene.jpg");
+    background-image: url("../../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/adidasLogoZmensene.jpg");
     background-size: cover;
     width: 300px;
     height: 200px;
@@ -68,7 +68,7 @@ h2{
 }
 
 .logoNike{
-    background-image: url("../obrazky/nikeLogoZmensene.jpg");
+    background-image: url("../../../../../../../../xampp/htdocs/Laravel/SemkaLaravel/public/Obrazky/nikeLogoZmensene.jpg");
     background-size: cover;
     width: 300px;
     height: 200px;
