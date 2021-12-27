@@ -7,6 +7,7 @@
             <div class="col-6 col-md-6 col-lg-3">
                 <a href="#">
                     <div class="logoNike">
+
                     </div>
                 </a>
             </div>
